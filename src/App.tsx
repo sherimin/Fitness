@@ -1,7 +1,9 @@
+import NavBar from "./scenes/NavBar";
+
 function App() {
   return (
       <div className='app bg-berry-20'>
-        App 1
+        <NavBar />
       </div>
   )
 }
