@@ -1,12 +1,9 @@
-import './App.css'
-
 function App() {
-
   return (
-      <div>
-        App
+      <div className='app bg-berry-20'>
+        App 1
       </div>
   )
 }
 
-export default App
+export default App;
