@@ -1,10 +1,14 @@
-import { useState } from "react";
-import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
+// import { useState } from "react";
+// import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
+import Link from "./Link";
 // import Logo from "@/assets/Logo.png"
 
-type Props = {};
+type Props = {
+    selectedPage: string;
+    setSelectedPage: (value: string) => void;
+};
 
-const NavBar = (props: Props) => {
+const NavBar = ({ selectedPage, setSelectedPage }: Props) => {
     const flexBetween = "flex items-center justify-between";
 
   return (
@@ -22,10 +26,26 @@ const NavBar = (props: Props) => {
                     <div className={`${flexBetween} w-full`}>
                         {/* NavBar Links */}
                         <div className={`${flexBetween} gap-8 text-sm`}>
-                            <p>Home</p>
-                            <p>Benefits</p>
-                            <p>Classes & Trainings</p>
-                            <p>Contacts</p>
+                            <Link 
+                              page="Home" 
+                              selectedPage={selectedPage} 
+                              setSelectedPage={setSelectedPage}
+                            />
+                            <Link 
+                              page="Benefits" 
+                              selectedPage={selectedPage} 
+                              setSelectedPage={setSelectedPage}
+                            />
+                            <Link 
+                              page="Personal Training"
+                              selectedPage={selectedPage} 
+                              setSelectedPage={setSelectedPage}
+                            />
+                            <Link 
+                              page="Contacts" 
+                              selectedPage={selectedPage} 
+                              setSelectedPage={setSelectedPage}
+                            />
                         </div>
 
                         {/* Sign In and Become a Member */}
@@ -33,7 +53,6 @@ const NavBar = (props: Props) => {
                             <p>Sign In</p>
 
                             <button>Become a Member</button>
-
                         </div>
                     </div>
                 </div>

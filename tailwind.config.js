@@ -12,7 +12,7 @@ module.exports = {
         "berry-100": "#B47B84",
         "berry-500": "#944E63",
         "primary-100": "#7E6363",
-        "primany-300": "#503C3C",
+        "primary-300": "#503C3C",
         "primary-500": "#3E3232",
         "secondary-400": "#ECB159",
         "secondary-500": "#B67352",
