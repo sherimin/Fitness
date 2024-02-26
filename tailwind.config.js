@@ -7,15 +7,15 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        "berry-20": "#FFE7E7",
-        "berry-50": "#CAA6A6",
-        "berry-100": "#B47B84",
-        "berry-500": "#944E63",
+        "cream-20": "#FAF0E4",
+        "cream-50": "#F6E4CE",
+        "cream-100": "#EECCA3",
+        "cream-500": "#D88B2E",
         "primary-100": "#7E6363",
         "primary-300": "#503C3C",
         "primary-500": "#3E3232",
-        "secondary-400": "#ECB159",
-        "secondary-500": "#B67352",
+        "secondary-400": "#3A8891",
+        "secondary-500": "#0E5E6F",
       },
       backgroundImage: (theme) => ({
         "gradient-pinkorange": "linear-gradient(90deg, #ECB159 0%, #FF8911 100%)",

@@ -3,6 +3,7 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 import { SelectedPage } from "@/shared/types";
 import Link from "./Link";
 import useMediaQuery from "@/hooks/useMediaQuery";
+import ActionButton from "@/shared/ActionButton";
 // import Logo from "@/assets/Logo.png"
 
 type Props = {
@@ -57,7 +58,7 @@ const NavBar = ({ selectedPage, setSelectedPage }: Props) => {
                         <div className={`${flexBetween} gap-8`}>
                             <p>Sign In</p>
 
-                            <button>Become a Member</button>
+                            <ActionButton setSelectedPage={setSelectedPage}>Become a Member</ActionButton>
                         </div>
                     </div> 
                     ) : (
@@ -66,13 +67,49 @@ const NavBar = ({ selectedPage, setSelectedPage }: Props) => {
                           className="rounded-full bg-secondary-400 p-2"
                           onClick={() => setIsMenuToggled(!isMenuToggled)}
                         >
-                            <Bars3Icon className="h-6 w-6 text-white" />
-
+                            <Bars3Icon className="h-6 w-6 text-cream-20" />
                         </button>
                     )}
                 </div>
             </div>
         </div>
+        {/* Mobile Menu Modal */}
+        {!isAboveMediumScreens && isMenuToggled && (
+            <div className="fixed right-0 botton-0 z-40 h-full w-[300px] bg-primary-100 drop-shadow-xl">
+                {/* Close Icon */}
+                <div className="flex justify-end p-12">
+                    <button onClick={() => setIsMenuToggled(!isMenuToggled)}>
+                        <XMarkIcon className="text-cream-100 h-6 w-6" />
+                    </button>
+                </div>
+
+                {/* Menu Links */}
+                <div className="ml-[33%] flex flex-col gap-10 text-2xl">
+                            <Link 
+                              page="Home" 
+                              selectedPage={selectedPage} 
+                              setSelectedPage={setSelectedPage}
+                            />
+                            <Link 
+                              page="Benefits" 
+                              selectedPage={selectedPage} 
+                              setSelectedPage={setSelectedPage}
+                            />
+                            <Link 
+                              page="Personal Training"
+                              selectedPage={selectedPage} 
+                              setSelectedPage={setSelectedPage}
+                            />
+                            <Link 
+                              page="Contacts" 
+                              selectedPage={selectedPage} 
+                              setSelectedPage={setSelectedPage}
+                            />
+                        </div>
+
+
+            </div>
+        )}
     </nav>
   )
 }
