@@ -21,12 +21,11 @@ const Home = ({ setSelectedPage }: Props) => {
       className="gap-16 bg-cream-20 pb-10 pt-10 md:h-full md:pb-0"
     >
       {/* Image and Header */}
-      <div>
+      <div className="md:flex mx-auto w-5/6 items-center justify-center md:h-5/6">
         {/* Main Header */}
-        <div>
+        <div className="z-10 mt-20 md:basis-3/5">
           {/* Headings */}
-
-          <div>
+          <div className="md:-mt-20">
             <div>
               <div>
                 <img src={HomePageText} alt="Home-Page-Text" />
@@ -59,7 +58,7 @@ const Home = ({ setSelectedPage }: Props) => {
 
         {/* Image */}
         <div>
-          <img alt="Home-Page-Img" src={HomePageGraphic} className="w-[400px] h-auto" />
+          <img alt="Home-Page-Img" src={HomePageGraphic} className="" />
         </div>
       </div>
 
