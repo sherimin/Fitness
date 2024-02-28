@@ -1,9 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-  ],
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
       colors: {
@@ -18,12 +15,13 @@ module.exports = {
         "secondary-500": "#0E5E6F",
       },
       backgroundImage: (theme) => ({
-        "gradient-pinkorange": "linear-gradient(90deg, #ECB159 0%, #FF8911 100%)",
+        "gradient-pinkorange":
+          "linear-gradient(90deg, #ECB159 0%, #FF8911 100%)",
         "mobile-home": "url('./assets/HomePageGraphic.png')",
       }),
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
-        playfair: ["Playfair Display", "serif"]
+        playfair: ["Playfair Display", "serif"],
       },
       content: {
         evolvetext: "url(./assets/EvolveText.png",

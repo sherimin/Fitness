@@ -5,7 +5,7 @@ import Home from "@/scenes/home";
 
 function App() {
   const [selectedPage, setSelectedPage] = useState<SelectedPage>(
-    SelectedPage.Home
+    SelectedPage.Home,
   );
   const [isTopOfPage, setIsTopOfPage] = useState<boolean>(true);
 
