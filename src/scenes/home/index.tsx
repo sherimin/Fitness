@@ -65,12 +65,20 @@ const Home = ({ setSelectedPage }: Props) => {
       {/* Sponsors */}
       {/* Hide sponsor section in small screens */}
       {isAboveMediumScreens && (
-        <div className="h-[120px] w-full bg-primary-100 py-10">
-          <div className="mx-auto w-5/6">
-            <div className="flex items-center justify-around gap-8">
-              <img alt="nike-sponsor" src={Nike} className="h-[40px]" /> 
-              <img alt="lululemon-sponsor" src={Lululemon} className="h-[40px]" />
-              <img alt="Adidas-sponsor" src={Adidas} className="h-[40px]" />
+        <div className="h-[120px] w-full bg-primary-100 py-5">
+          <div className="text-center mt-0 mb-5 font-semibold text-xl"
+          >
+            Partnered With
+          </div>
+          <div className="mx-auto w-1/2">
+            <div className="flex items-center justify-between gap-20">
+            <img alt="lululemon-sponsor" src={Lululemon} className="h-[3rem]" />
+            
+            <img alt="Adidas-sponsor" src={Adidas} className="h-[3rem]" />
+            <img alt="lululemon-sponsor" src={Lululemon} className="h-[3rem]" />
+              {/* <img alt="nike-sponsor" src={Nike} className="h-[3rem]" />  */}
+              
+              
             </div>
           </div>
         </div>
