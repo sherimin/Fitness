@@ -23,16 +23,16 @@ const Home = ({ setSelectedPage }: Props) => {
       {/* Image and Header */}
       <div className="md:flex mx-auto w-5/6 items-center justify-center md:h-5/6">
         {/* Main Header */}
-        <div className="z-10 mt-20 md:basis-3/5">
+        <div className="z-10 mt-20 md:mt-0 md:basis-3/5">
           {/* Headings */}
-          <div className="md:-mt-20">
+          <div className="md:-mt-10">
             <div className="relative">
-              <div className="before:absolute before:-top-20 before:-left-50 before:z-[-1] md:before:content-icoachtext">
+              <div className="before:absolute before:-top-[9rem] before:-left-20 before:z-[-1] md:before:content-icoachtext">
                 <img src={HomePageText} alt="Home-Page-Text" />
               </div>
             </div>
 
-            <p className="text-primary-300 font-playfair">
+            <p className="text-primary-300 font-playfair -mt-10 text-sm md:text-start">
               At iCoach Fitness Hub, we integrate advanced technology with
               personalized coaching to elevate your fitness journey. We offer
               remote coaching sessions for tailored workouts and personalized
@@ -42,7 +42,7 @@ const Home = ({ setSelectedPage }: Props) => {
           </div>
 
           {/* Actions */}
-          <div>
+          <div className="mt-8 flex items-center gap-8 md:justify-start">
             <ActionButton setSelectedPage={setSelectedPage}>
               JOIN NOW!
             </ActionButton>
@@ -57,17 +57,17 @@ const Home = ({ setSelectedPage }: Props) => {
         </div>
 
         {/* Image */}
-        <div>
-          <img alt="Home-Page-Img" src={HomePageGraphic} className="z-50" />
+        <div className="flex basis-3/5 justify-center md:z-10 md:ml-40 lg:ml-40 md:mt-16 md:justify-items-end">
+          <img alt="Home-Page-Img" src={HomePageGraphic} className="" />
         </div>
       </div>
 
       {/* Sponsors */}
       {/* Hide sponsor section in small screens */}
       {isAboveMediumScreens && (
-        <div>
-          <div>
-            <div>
+        <div className="h-[120px] w-full bg-primary-100 py-10">
+          <div className="mx-auto w-5/6">
+            <div className="flex items-center justify-around gap-8">
               <img alt="nike-sponsor" src={Nike} className="h-[40px]" /> 
               <img alt="lululemon-sponsor" src={Lululemon} className="h-[40px]" />
               <img alt="Adidas-sponsor" src={Adidas} className="h-[40px]" />
