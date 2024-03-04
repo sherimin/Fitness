@@ -23,7 +23,10 @@ const Home = ({ setSelectedPage }: Props) => {
       className="gap-16 bg-cream-20 pb-10 pt-10 md:h-full md:pb-0"
     >
       {/* Image and Header */}
-      <div className="md:flex mx-auto w-5/6 items-center justify-center md:h-5/6">
+      <motion.div 
+        className="md:flex mx-auto w-5/6 items-center justify-center md:h-5/6"
+        onViewportEnter={() => setSelectedPage(SelectedPage.Home)}
+      >
         {/* Main Header */}
         <div className="z-10 mt-20 md:mt-0 md:basis-3/5">
           {/* Headings */}
@@ -56,7 +59,19 @@ const Home = ({ setSelectedPage }: Props) => {
           </motion.div>
 
           {/* Actions */}
-          <div className="mt-8 flex items-center gap-8 md:justify-start">
+          <motion.div 
+            className="mt-8 flex items-center gap-8 xs:justify-center sm:justify-start"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ duration: 1, delay: 0.2 }}
+            variants={{
+              //initial condition
+              hidden: { opacity: 0, x:-50 },
+              //final condition
+              visible: {opacity: 1, x:0 },
+            }}
+          >
             <ActionButton setSelectedPage={setSelectedPage}>
               JOIN NOW!
             </ActionButton>
@@ -67,14 +82,14 @@ const Home = ({ setSelectedPage }: Props) => {
             >
               Learn More
             </AnchorLink>
-          </div>
+          </motion.div>
         </div>
 
         {/* Image */}
         <div className="flex basis-3/5 justify-center md:z-10 md:ml-40 lg:ml-40 md:mt-16 md:justify-items-end">
           <img alt="Home-Page-Img" src={HomePageGraphic} className="" />
         </div>
-      </div>
+      </motion.div>
 
       {/* Sponsors */}
       {/* Hide sponsor section in small screens */}
