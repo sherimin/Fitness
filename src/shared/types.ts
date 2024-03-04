@@ -4,3 +4,9 @@ export enum SelectedPage {
   PersonalTraining = "personaltraining",
   Contacts = "contacts",
 }
+
+export interface BenefitType {
+  icon: JSX.Element;
+  title: string;
+  description: string;
+}
