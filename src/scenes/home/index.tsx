@@ -7,6 +7,8 @@ import AnchorLink from "react-anchor-link-smooth-scroll";
 import Nike from "@/assets/Nike.png"
 import Lululemon from "@/assets/Lululemon.png"
 import Adidas from "@/assets/Adidas.png"
+import { motion } from "framer-motion";
+
 
 type Props = {
   setSelectedPage: (value: SelectedPage) => void;
@@ -25,7 +27,19 @@ const Home = ({ setSelectedPage }: Props) => {
         {/* Main Header */}
         <div className="z-10 mt-20 md:mt-0 md:basis-3/5">
           {/* Headings */}
-          <div className="md:-mt-10">
+          <motion.div 
+            className="md:-mt-10"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ duration: 1 }}
+            variants={{
+              //initial condition
+              hidden: { opacity: 0, x:-50 },
+              //final condition
+              visible: {opacity: 1, x:0 },
+            }}
+          >
             <div className="relative">
               <div className="before:absolute before:-top-[9rem] before:-left-20 before:z-[-1] md:before:content-icoachtext">
                 <img src={HomePageText} alt="Home-Page-Text" />
@@ -39,7 +53,7 @@ const Home = ({ setSelectedPage }: Props) => {
               nutrition advice, empowering you to achieve your goals with expert
               guidance from anywhere.
             </p>
-          </div>
+          </motion.div>
 
           {/* Actions */}
           <div className="mt-8 flex items-center gap-8 md:justify-start">
@@ -65,7 +79,7 @@ const Home = ({ setSelectedPage }: Props) => {
       {/* Sponsors */}
       {/* Hide sponsor section in small screens */}
       {isAboveMediumScreens && (
-        <div className="h-[120px] w-full bg-primary-100 py-5">
+        <div className="h-[130px] w-full bg-primary-100 py-5">
           <div className="text-center mt-0 mb-5 font-semibold text-xl"
           >
             Partnered With
