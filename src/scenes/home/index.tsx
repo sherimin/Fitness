@@ -4,11 +4,10 @@ import HomePageGraphic from "@/assets/HomePageGraphic.png";
 import HomePageText from "@/assets/HomePageText.png";
 import ActionButton from "@/shared/ActionButton";
 import AnchorLink from "react-anchor-link-smooth-scroll";
-import Nike from "@/assets/Nike.png"
-import Lululemon from "@/assets/Lululemon.png"
-import Adidas from "@/assets/Adidas.png"
+import Nike from "@/assets/Nike.png";
+import Lululemon from "@/assets/Lululemon.png";
+import Adidas from "@/assets/Adidas.png";
 import { motion } from "framer-motion";
-
 
 type Props = {
   setSelectedPage: (value: SelectedPage) => void;
@@ -23,14 +22,14 @@ const Home = ({ setSelectedPage }: Props) => {
       className="gap-16 bg-cream-20 pb-10 pt-10 md:h-full md:pb-0"
     >
       {/* Image and Header */}
-      <motion.div 
+      <motion.div
         className="md:flex mx-auto w-5/6 items-center justify-center md:h-5/6"
         onViewportEnter={() => setSelectedPage(SelectedPage.Home)}
       >
         {/* Main Header */}
         <div className="z-10 mt-20 md:mt-0 md:basis-3/5">
           {/* Headings */}
-          <motion.div 
+          <motion.div
             className="md:-mt-10"
             initial="hidden"
             whileInView="visible"
@@ -38,9 +37,9 @@ const Home = ({ setSelectedPage }: Props) => {
             transition={{ duration: 1 }}
             variants={{
               //initial condition
-              hidden: { opacity: 0, x:-50 },
+              hidden: { opacity: 0, x: -50 },
               //final condition
-              visible: {opacity: 1, x:0 },
+              visible: { opacity: 1, x: 0 },
             }}
           >
             <div className="relative">
@@ -59,7 +58,7 @@ const Home = ({ setSelectedPage }: Props) => {
           </motion.div>
 
           {/* Actions */}
-          <motion.div 
+          <motion.div
             className="mt-8 flex items-center gap-8 xs:justify-center sm:justify-start"
             initial="hidden"
             whileInView="visible"
@@ -67,9 +66,9 @@ const Home = ({ setSelectedPage }: Props) => {
             transition={{ duration: 1, delay: 0.2 }}
             variants={{
               //initial condition
-              hidden: { opacity: 0, x:-50 },
+              hidden: { opacity: 0, x: -50 },
               //final condition
-              visible: {opacity: 1, x:0 },
+              visible: { opacity: 1, x: 0 },
             }}
           >
             <ActionButton setSelectedPage={setSelectedPage}>
@@ -95,19 +94,24 @@ const Home = ({ setSelectedPage }: Props) => {
       {/* Hide sponsor section in small screens */}
       {isAboveMediumScreens && (
         <div className="h-[130px] w-full bg-primary-100 py-5">
-          <div className="text-center mt-0 mb-5 font-semibold text-xl"
-          >
+          <div className="text-center mt-0 mb-5 font-semibold text-xl">
             Partnered With
           </div>
           <div className="mx-auto w-1/2">
             <div className="flex items-center justify-between gap-20">
-            <img alt="lululemon-sponsor" src={Lululemon} className="h-[3rem]" />
-            
-            <img alt="Adidas-sponsor" src={Adidas} className="h-[3rem]" />
-            <img alt="lululemon-sponsor" src={Lululemon} className="h-[3rem]" />
+              <img
+                alt="lululemon-sponsor"
+                src={Lululemon}
+                className="h-[3rem]"
+              />
+
+              <img alt="Adidas-sponsor" src={Adidas} className="h-[3rem]" />
+              <img
+                alt="lululemon-sponsor"
+                src={Lululemon}
+                className="h-[3rem]"
+              />
               {/* <img alt="nike-sponsor" src={Nike} className="h-[3rem]" />  */}
-              
-              
             </div>
           </div>
         </div>
