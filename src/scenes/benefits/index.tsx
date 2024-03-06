@@ -47,7 +47,16 @@ const Benefits = ({ setSelectedPage }: Props) => {
         onViewportEnter={() => setSelectedPage(SelectedPage.Benefits)}
       >
         {/* Header */}
-        <div className="md:my-5 md:w-3/5">
+        <motion.div 
+          className="md:my-5 md:w-3/5"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.5 }}
+            transition={{ duration: 1 }}
+            variants={{
+              hidden: { opacity: 0, x: -50 },
+              visible: { opacity: 1, x: 0 },
+            }}>
           <HText>revolutionize your fitness journey.</HText>
           <p className="my-5 text-sm">
             At <text className="font-semibold">iCoach Fitness Hub</text>, we
@@ -57,7 +66,7 @@ const Benefits = ({ setSelectedPage }: Props) => {
             <text className="font-semibold">iCoach Fitness Hub</text> is not
             just a gym; it's your partner in transformation.
           </p>
-        </div>
+        </motion.div>
 
         {/* Benefits */}
         <motion.div 
