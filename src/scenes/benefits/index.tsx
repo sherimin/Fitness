@@ -17,7 +17,7 @@ const benefits: Array<BenefitType> = [
     icon: <UserGroupIcon className="h-6 w-6" />,
     title: "Personalized Coaching",
     description:
-      "Our expert coaches provide tailored guidance to help you maximize your workouts and reach your fitness goals efficiently.",
+      "We take a holistic approach to your fitness journey, providing guidance not only in workouts but also in lifestyle adjustments, ensuring sustainable, progressive and long-term success."
   },
   {
     icon: <GlobeAmericasIcon className="h-6 w-6" />,
@@ -29,9 +29,16 @@ const benefits: Array<BenefitType> = [
     icon: <BuildingStorefrontIcon className="h-6 w-6" />,
     title: "Nutrition Guidance",
     description:
-      "Our platform offers personalized nutrition advice to optimize your overall health and wellness, ensuring a comprehensive approach to your fitness journey.",
+      "Our platform offers personalized nutrition advice to optimize your overall health and wellness, ensuring a comprehensive approach to reach your fitness goals.",
   },
 ];
+
+const container = {
+    hidden: {},
+    visible: {
+        transition: { staggerChildren: 0.2 }
+    }
+}
 
 const Benefits = ({ setSelectedPage }: Props) => {
   return (
@@ -53,7 +60,13 @@ const Benefits = ({ setSelectedPage }: Props) => {
         </div>
 
         {/* Benefits */}
-        <div className="md: flex items-center justify-between gap-8 mt-5">
+        <motion.div 
+          className="md:flex items-center justify-between gap-8 mt-5"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.5 }}
+          variants={container}
+        >
           {benefits.map((benefit: BenefitType) => (
             <Benefit 
               key={benefit.title}
@@ -63,7 +76,7 @@ const Benefits = ({ setSelectedPage }: Props) => {
               setSelectedPage={setSelectedPage}
             />
           ))}
-        </div>
+        </motion.div>
       </motion.div>
     </section>
   );

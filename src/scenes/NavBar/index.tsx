@@ -21,12 +21,12 @@ const NavBar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
   return (
     <nav>
       <div
-        className={`${navbarBackground} ${flexBetween} fixed top-0 z-30 w-full py-0`}
+        className={`${navbarBackground} ${flexBetween} fixed top-0 z-30 w-full h-[10%] py-0 rounded-bl-[10%] rounded-br-[10%]`}
       >
         <div className={`${flexBetween} mx-auto w-5/6`}>
           <div className={`${flexBetween} w-full gap-16`}>
             {/* Top-Left */}
-            <img alt="logo" src={Logo} className="h-28 2-auto" />
+            <img alt="logo" src={Logo} className="h-28 w-auto" />
             {/* Top-Right */}
             {isAboveMediumScreens ? (
               <div className={`${flexBetween} w-full`}>
@@ -77,11 +77,11 @@ const NavBar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
       </div>
       {/* Mobile Menu Modal */}
       {!isAboveMediumScreens && isMenuToggled && (
-        <div className="fixed right-0 botton-0 z-40 h-full w-[300px] bg-primary-100 drop-shadow-xl rounded-tl-3xl rounded-bl-3xl">
+        <div className="fixed right-0 botton-0 z-40 h-full w-[260px] bg-primary-100 drop-shadow-xl rounded-tl-3xl rounded-bl-3xl">
           {/* Close Icon */}
           <div className="flex justify-end p-12">
             <button onClick={() => setIsMenuToggled(!isMenuToggled)}>
-              <XMarkIcon className="text-cream-100 h-6 w-6" />
+              <XMarkIcon className="text-cream-100 h-6 w-6 hover:opacity-60" />
             </button>
           </div>
 
