@@ -29,6 +29,7 @@ module.exports = {
         blockarrows: "url('./assets/arrow.png')",
         arrow: "url('./assets/arrowpic.png')",
         earth: "url('./assets/earth.png')",
+        heartline: "url('./assets/heartline.png')",
       },
     },
     screens: {

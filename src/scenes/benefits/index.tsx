@@ -96,7 +96,7 @@ const Benefits = ({ setSelectedPage }: Props) => {
         <div className="mt-16 items-center justify-between gap-20 md:mt-28 md:flex">
             {/* Graphic */}
             <img 
-              className="mx-auto"
+              className="mx-auto h-[36rem] w-auto"
               alt="BenefitsGraphic"
               src={BenefitGraph}
             />
@@ -106,7 +106,7 @@ const Benefits = ({ setSelectedPage }: Props) => {
                 {/* Title */}
                 <div className="relative">
                     <div 
-                      className="before:absolute before:-top-20 before:-left-20 before:z-[1] before:content-blockarrows"
+                      className="before:absolute before:-top-64 before:-left-20 before:z-[-1] before:content-blockarrows before:max-h-2 before:max-w-2"
                     >
                         <div>
                             <HText>
@@ -131,7 +131,7 @@ const Benefits = ({ setSelectedPage }: Props) => {
 
                 {/* Button */}
                 <div className="relative mt-16">
-                    <div className="before:absolute before:-bottom-30 before:right-40 before:z-[-1] before:content-earth">
+                    <div className="before:absolute before:-top-20 before:-right-24 before:z-[-1] before:content-heartline before:h-3">
                         <ActionButton setSelectedPage={setSelectedPage}>
                             JOIN US
                         </ActionButton>
