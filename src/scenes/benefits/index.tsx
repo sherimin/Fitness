@@ -7,6 +7,8 @@ import {
   GlobeAmericasIcon,
 } from "@heroicons/react/24/solid";
 import { motion } from "framer-motion";
+import BenefitGraph from "@/assets/BenefitsGraphic.png";
+import ActionButton from "@/shared/ActionButton";
 
 type Props = {
   setSelectedPage: (value: SelectedPage) => void;
@@ -57,7 +59,10 @@ const Benefits = ({ setSelectedPage }: Props) => {
               hidden: { opacity: 0, x: -50 },
               visible: { opacity: 1, x: 0 },
             }}>
-          <HText>revolutionize your fitness journey.</HText>
+          <HText>
+            <span className="text-cream-500">revolutionize</span>
+            {" "}your fitness journey.
+          </HText>
           <p className="my-5 text-sm">
             At <text className="font-semibold">iCoach Fitness Hub</text>, we
             blend cutting-edge technology with personalized coaching to help you
@@ -86,6 +91,56 @@ const Benefits = ({ setSelectedPage }: Props) => {
             />
           ))}
         </motion.div>
+
+        {/* Graphic and More Benefits Description */}
+        <div className="mt-16 items-center justify-between gap-20 md:mt-28 md:flex">
+            {/* Graphic */}
+            <img 
+              className="mx-auto"
+              alt="BenefitsGraphic"
+              src={BenefitGraph}
+            />
+
+            {/* Description */}
+            <div>
+                {/* Title */}
+                <div className="relative">
+                    <div 
+                      className="before:absolute before:-top-20 before:-left-20 before:z-[1] before:content-blockarrows"
+                    >
+                        <div>
+                            <HText>
+                              we{" "}
+                              <span className="text-cream-500">redefine</span> 
+                              {" "}your wellness experience.
+                            </HText>
+                        </div>
+                    </div>
+                </div>
+
+                {/* Description */}
+                <div>
+                    <p className="my-5">
+                        At iCoach Fitness Hub, our mission is simple: to deliver results. Our team of experienced coaches takes the time to understand your unique needs, goals, and challenges, crafting customized workout plans and providing expert guidance every step of the way. 
+                    </p>
+
+                    <p className="my-5">
+                        With a track record of success stories and a commitment to excellence, iCoach Fitness Hub is the ultimate destination for those seeking real, lasting results in their fitness journey.
+                    </p>
+                </div>
+
+                {/* Button */}
+                <div className="relative mt-16">
+                    <div className="before:absolute before:-bottom-30 before:right-40 before:z-[-1] before:content-earth">
+                        <ActionButton setSelectedPage={setSelectedPage}>
+                            JOIN US
+                        </ActionButton>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        
       </motion.div>
     </section>
   );

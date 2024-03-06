@@ -26,9 +26,9 @@ module.exports = {
       },
       content: {
         icoachtext: "url('./assets/iCoachText.png')",
-        abstractwaves: "url(./assets/AbstractWaves.png",
-        sparkles: "url(./assets/Sparkles.png",
-        circles: "url(./assets/Circles.png",
+        blockarrows: "url('./assets/arrow.png')",
+        arrow: "url('./assets/arrowpic.png')",
+        earth: "url('./assets/earth.png')",
       },
     },
     screens: {
