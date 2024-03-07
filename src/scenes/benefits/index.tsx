@@ -19,7 +19,7 @@ const benefits: Array<BenefitType> = [
     icon: <UserGroupIcon className="h-6 w-6" />,
     title: "Personalized Coaching",
     description:
-      "We take a holistic approach to your fitness journey, providing guidance not only in workouts but also in lifestyle adjustments, ensuring sustainable, progressive and long-term success."
+      "We take a holistic approach to your fitness journey, providing guidance not only in workouts but also in lifestyle adjustments, ensuring sustainable, progressive and long-term success.",
   },
   {
     icon: <GlobeAmericasIcon className="h-6 w-6" />,
@@ -36,32 +36,36 @@ const benefits: Array<BenefitType> = [
 ];
 
 const container = {
-    hidden: {},
-    visible: {
-        transition: { staggerChildren: 0.2 }
-    }
-}
+  hidden: {},
+  visible: {
+    transition: { staggerChildren: 0.2 },
+  },
+};
 
 const Benefits = ({ setSelectedPage }: Props) => {
   return (
-    <section id="benefits" className="mx-auto min-h-full w-5/6 py-20 text-primary-300">
+    <section
+      id="benefits"
+      className="mx-auto min-h-full w-5/6 py-20 text-primary-300"
+    >
       <motion.div
         onViewportEnter={() => setSelectedPage(SelectedPage.Benefits)}
       >
         {/* Header */}
-        <motion.div 
+        <motion.div
           className="md:my-5 md:w-3/5"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}
-            transition={{ duration: 1 }}
-            variants={{
-              hidden: { opacity: 0, x: -50 },
-              visible: { opacity: 1, x: 0 },
-            }}>
+          transition={{ duration: 1 }}
+          variants={{
+            hidden: { opacity: 0, x: -50 },
+            visible: { opacity: 1, x: 0 },
+          }}
+        >
           <HText>
-            <span className="text-cream-500">revolutionize</span>
-            {" "}your fitness journey.
+            <span className="text-cream-500">revolutionize</span> your fitness
+            journey.
           </HText>
           <p className="my-5 text-sm">
             At <text className="font-semibold">iCoach Fitness Hub</text>, we
@@ -74,7 +78,7 @@ const Benefits = ({ setSelectedPage }: Props) => {
         </motion.div>
 
         {/* Benefits */}
-        <motion.div 
+        <motion.div
           className="md:flex items-center justify-between gap-8 mt-5"
           initial="hidden"
           whileInView="visible"
@@ -82,7 +86,7 @@ const Benefits = ({ setSelectedPage }: Props) => {
           variants={container}
         >
           {benefits.map((benefit: BenefitType) => (
-            <Benefit 
+            <Benefit
               key={benefit.title}
               icon={benefit.icon}
               title={benefit.title}
@@ -94,53 +98,74 @@ const Benefits = ({ setSelectedPage }: Props) => {
 
         {/* Graphic and More Benefits Description */}
         <div className="mt-16 items-center justify-between gap-20 md:mt-28 md:flex">
-            {/* Graphic */}
-            <img 
-              className="mx-auto h-[36rem] w-auto"
-              alt="BenefitsGraphic"
-              src={BenefitGraph}
-            />
+          {/* Graphic */}
+          <img
+            className="mx-auto h-[36rem] w-auto"
+            alt="BenefitsGraphic"
+            src={BenefitGraph}
+          />
+
+          {/* Description */}
+          <div>
+            {/* Title */}
+            <div className="relative">
+              <div className="before:absolute before:-top-64 before:-left-20 before:z-[-1] before:content-blockarrows before:max-h-2 before:max-w-2">
+                <motion.div
+                  className="md:flex items-center justify-between gap-8 mt-10"
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true, amount: 0.5 }}
+                  transition={{ duration: 0.5 }}
+                  variants={{
+                    hidden: { opacity: 0, x: 50 },
+                    visible: { opacity: 1, x: 0 },
+                  }}
+                >
+                  <HText>
+                    <span className="text-cream-500">redefine</span> your
+                    wellness experience.
+                  </HText>
+                </motion.div>
+              </div>
+            </div>
 
             {/* Description */}
-            <div>
-                {/* Title */}
-                <div className="relative">
-                    <div 
-                      className="before:absolute before:-top-64 before:-left-20 before:z-[-1] before:content-blockarrows before:max-h-2 before:max-w-2"
-                    >
-                        <div>
-                            <HText>
-                              we{" "}
-                              <span className="text-cream-500">redefine</span> 
-                              {" "}your wellness experience.
-                            </HText>
-                        </div>
-                    </div>
-                </div>
+            <motion.div
+              className=""
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.5 }}
+              transition={{ duration: 0.5, delay: 0.5 }}
+              variants={{
+                hidden: { opacity: 0, x: 50 },
+                visible: { opacity: 1, x: 0 },
+              }}
+            >
+              <p className="my-5">
+                At iCoach Fitness Hub, our mission is simple: to deliver
+                results. Our team of experienced coaches takes the time to
+                understand your unique needs, goals, and challenges, crafting
+                customized workout plans and providing expert guidance every
+                step of the way.
+              </p>
 
-                {/* Description */}
-                <div>
-                    <p className="my-5">
-                        At iCoach Fitness Hub, our mission is simple: to deliver results. Our team of experienced coaches takes the time to understand your unique needs, goals, and challenges, crafting customized workout plans and providing expert guidance every step of the way. 
-                    </p>
+              <p className="my-5">
+                With a track record of success stories and a commitment to
+                excellence, iCoach Fitness Hub is the ultimate destination for
+                those seeking real, lasting results in their fitness journey.
+              </p>
+            </motion.div>
 
-                    <p className="my-5">
-                        With a track record of success stories and a commitment to excellence, iCoach Fitness Hub is the ultimate destination for those seeking real, lasting results in their fitness journey.
-                    </p>
-                </div>
-
-                {/* Button */}
-                <div className="relative mt-16">
-                    <div className="before:absolute before:-top-20 before:-right-24 before:z-[-1] before:content-heartline before:h-3">
-                        <ActionButton setSelectedPage={setSelectedPage}>
-                            JOIN US
-                        </ActionButton>
-
-                    </div>
-                </div>
+            {/* Button */}
+            <div className="relative mt-16">
+              <div className="before:absolute before:-top-20 before:-right-24 before:z-[-1] before:content-heartline before:h-3">
+                <ActionButton setSelectedPage={setSelectedPage}>
+                  JOIN US
+                </ActionButton>
+              </div>
             </div>
+          </div>
         </div>
-        
       </motion.div>
     </section>
   );

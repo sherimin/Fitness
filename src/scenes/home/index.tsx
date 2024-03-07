@@ -8,6 +8,7 @@ import Nike from "@/assets/Nike.png";
 import Lululemon from "@/assets/Lululemon.png";
 import Adidas from "@/assets/Adidas.png";
 import { motion } from "framer-motion";
+import HText from "@/shared/HText";
 
 type Props = {
   setSelectedPage: (value: SelectedPage) => void;
@@ -95,7 +96,7 @@ const Home = ({ setSelectedPage }: Props) => {
       {isAboveMediumScreens && (
         <div className="h-[135px] w-full bg-primary-100 py-5">
           <div className="text-center mt-0 mb-5 font-semibold text-xl">
-            Partnered With
+            PARTNERED WITH
           </div>
           <div className="mx-auto w-1/2">
             <div className="flex items-center justify-between gap-20">
