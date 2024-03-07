@@ -109,7 +109,7 @@ const Benefits = ({ setSelectedPage }: Props) => {
           <div>
             {/* Title */}
             <div className="relative">
-              <div className="before:absolute before:-top-64 before:-left-20 before:z-[-1] before:content-blockarrows before:max-h-2 before:max-w-2">
+              <div className="before:absolute before:-top-52 before:-left-20 before:z-[-1] before:content-blockarrows before:max-h-2 before:max-w-2">
                 <motion.div
                   className="md:flex items-center justify-between gap-8 mt-10"
                   initial="hidden"
@@ -122,8 +122,7 @@ const Benefits = ({ setSelectedPage }: Props) => {
                   }}
                 >
                   <HText>
-                    <span className="text-cream-500">redefine</span> your
-                    wellness experience.
+                    <span className="text-cream-500">redefine</span> your wellness experience.
                   </HText>
                 </motion.div>
               </div>
@@ -150,15 +149,13 @@ const Benefits = ({ setSelectedPage }: Props) => {
               </p>
 
               <p className="my-5">
-                With a track record of success stories and a commitment to
-                excellence, iCoach Fitness Hub is the ultimate destination for
-                those seeking real, lasting results in their fitness journey.
+                With a track record of success stories and a commitment to excellence, iCoach Fitness Hub is the ultimate destination for those seeking real, lasting results in their fitness journey.
               </p>
             </motion.div>
 
             {/* Button */}
             <div className="relative mt-16">
-              <div className="before:absolute before:-top-20 before:-right-24 before:z-[-1] before:content-heartline before:h-3">
+              <div className="before:absolute before:-top-16 before:-right-20 before:z-[-1] before:content-earth before:h-3">
                 <ActionButton setSelectedPage={setSelectedPage}>
                   JOIN US
                 </ActionButton>
