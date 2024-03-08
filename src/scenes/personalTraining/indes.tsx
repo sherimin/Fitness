@@ -7,12 +7,14 @@ import image05 from '@/assets/image08.jpg';
 import image06 from '@/assets/image09.jpg';
 import { motion } from 'framer-motion';
 import HText from '@/shared/HText';
+import { TrainingsType } from '@/shared/types';
+import Trainings from './Trainings';
 
 type Props = {
     setSelectedPage: (value: SelectedPage) => void;
 }
 
-const trainings = [
+const trainings: Array<TrainingsType> = [
   {
     name: "Onsite Facilities",
     description: "Our onsite facilities not only boast high-tech equipment but also offer immersive experiences such as virtual reality workouts, ensuring a dynamic and engaging fitness environment.",
@@ -20,12 +22,10 @@ const trainings = [
   },
   {
     name: "Modern CrossFit Training",
-    description: "Experience the intensity and versatility of CrossFit training in our modern section, featuring innovative circuit setups and functional training areas to challenge your body and mind.",
     image: image02,
   },
   {
     name: "Group Classes",
-    description: "Join our energizing group sessions led by motivating instructors, where you'll not only sweat it out together but also forge lasting friendships and support networks along your fitness journey.",
     image: image03,
   },
   {
@@ -75,12 +75,15 @@ const PersonalTraining = ({ setSelectedPage }: Props) => {
             {/* Y-Scroll */}
             <div className='mt-10 h-[353px] w-full overflow-x-auto overflow-y-hidden'>
               <ul className='w-[2800px] whitespace-nowrap'>
-                <li>
-                  {`${trainings}`}
-                </li>
-
+                {trainings.map((item: TrainingsType, index) => (
+                  <Trainings 
+                    key={`${item.name}-${index}`}
+                    name={item.name}
+                    description={item.description}
+                    image={item.image}
+                  />
+                ))}
               </ul>
-
             </div>
         </motion.div>
     </section>
