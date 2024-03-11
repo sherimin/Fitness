@@ -13,6 +13,6 @@ export interface BenefitType {
 
 export interface TrainingsType {
   name: string;
-  description?: string ;
+  description?: string;
   image: string;
 }
