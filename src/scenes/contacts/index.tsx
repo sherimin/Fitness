@@ -30,7 +30,7 @@ const Contacts = ({ setSelectedPage }: Props) => {
   return (
     <section
       id="contacts"
-      className="bg-cream-20 text-primary-300 mx-auto w-full pt-24 pb-32"
+      className="text-primary-300 mx-auto w-full pt-24 pb-32"
     >
       <motion.div
         onViewportEnter={() => setSelectedPage(SelectedPage.Contacts)}
@@ -77,7 +77,7 @@ const Contacts = ({ setSelectedPage }: Props) => {
               target="_blank"
               onSubmit={onSubmit}
               method="POST"
-              action="https://formsubmit.co/sherisherilu@gmail.com"
+              action="https://formsubmit.co/256bef40c91d7d4029638e44bd7a006d"
             >
               <input
                 className={inputStyles}
@@ -150,16 +150,14 @@ const Contacts = ({ setSelectedPage }: Props) => {
               visible: { opacity: 1, y: 0 },
             }}
           >
-            <div className="w-full before:absolute before:-bottom-20 before:-right-20 md:before:content-icoachtext before:z-[-1]">
+            <div className="w-full before:absolute before:-bottom-40 before:-right-20 md:before:content-icoachtext before:z-[-1]">
               <img
                 src={ContactsGraphic}
                 alt="ContactsGraphic"
                 className="w-full h-5/6 rounded-xl xs:my-20 md:my-0"
               />
             </div>
-          </motion.div>
-
-          
+          </motion.div>          
         </div>
       </motion.div>
     </section>
