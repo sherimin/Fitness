@@ -77,16 +77,17 @@ const Contacts = ({ setSelectedPage }: Props) => {
               method="POST"
             >
               <input
-                className="bg-primary-100 h-[45px] rounded-lg p-5"
-                placeholder="Your Name"
+                className="bg-primary-100 h-[45px] rounded-lg p-5 placeholder-cream-100 "
+                placeholder="YOUR NAME"
               />
               <input
-                className="bg-primary-100 h-[45px] rounded-lg p-5"
-                placeholder="Your Email"
+                className="bg-primary-100 h-[45px] rounded-lg p-5 placeholder-cream-100"
+                placeholder="YOUR EMAIL"
+                type="email"
               />
               <textarea
-                className="bg-primary-100 h-[300px] rounded-lg p-5"
-                placeholder="Message"
+                className="bg-primary-100 h-[300px] rounded-lg p-5 placeholder-cream-100"
+                placeholder="MESSAGE"
               />
             </form>
           </motion.div>
