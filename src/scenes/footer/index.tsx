@@ -37,7 +37,7 @@ const Footer = () => {
 
           <div className="flex">
             <p className="mt-5 mr-5">
-              <a href="https://github.com/sherimin">
+              <a href="https://github.com/sherimin/Fitness">
                 <img
                   src={GitHubIcon}
                   alt="GitHub-Link"

@@ -4,11 +4,9 @@ import HomePageGraphic from "@/assets/HomePageGraphic.png";
 import HomePageText from "@/assets/HomePageText.png";
 import ActionButton from "@/shared/ActionButton";
 import AnchorLink from "react-anchor-link-smooth-scroll";
-import Nike from "@/assets/Nike.png";
 import Lululemon from "@/assets/Lululemon.png";
 import Adidas from "@/assets/Adidas.png";
 import { motion } from "framer-motion";
-import HText from "@/shared/HText";
 
 type Props = {
   setSelectedPage: (value: SelectedPage) => void;
