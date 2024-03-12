@@ -50,7 +50,9 @@ const Home = ({ setSelectedPage }: Props) => {
             </div>
 
             <p className="text-primary-300 font-playfair -mt-10 text-sm md:text-start">
-              At iCoach Fitness Hub, we integrate advanced technology with personalized coaching to elevate your fitness journey. We offer remote coaching sessions for tailored workouts and personalized
+              At iCoach Fitness Hub, we integrate advanced technology with
+              personalized coaching to elevate your fitness journey. We offer
+              remote coaching sessions for tailored workouts and personalized
               nutrition advice, empowering you to achieve your goals with expert
               guidance from anywhere.
             </p>
