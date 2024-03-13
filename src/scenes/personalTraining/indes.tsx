@@ -53,7 +53,7 @@ const PersonalTraining = ({ setSelectedPage }: Props) => {
   return (
     <section
       id="personaltraining"
-      className="w-full bg-primary-100 py-24 text-cream-20"
+      className="w-full bg-primary-100 pt-24 pb-28 text-cream-20"
     >
       <motion.div
         onViewportEnter={() => setSelectedPage(SelectedPage.PersonalTraining)}
@@ -87,7 +87,7 @@ const PersonalTraining = ({ setSelectedPage }: Props) => {
           </div>
         </motion.div>
         {/* Y-Scroll */}
-        <div className="mt-10 h-[353px] w-full overflow-x-auto overflow-y-hidden">
+        <div className="h-[353px] w-full overflow-x-auto overflow-y-hidden mt-16">
           <ul className="w-[2800px] whitespace-nowrap">
             {trainings.map((item: TrainingsType, index) => (
               <Trainings
