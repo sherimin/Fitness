@@ -23,8 +23,7 @@ const Contacts = ({ setSelectedPage }: Props) => {
     if (!isValid) {
       e.preventDefault();
     } else {
-      window.alert("Thank you! Your message has been sent. 📧");
-      e.target.reset();
+      window.alert("📧Thank you! Please verify in the popup window." );
     }
   };
 
