@@ -22,6 +22,9 @@ const Contacts = ({ setSelectedPage }: Props) => {
 
     if (!isValid) {
       e.preventDefault();
+    } else {
+      window.alert("Thank you! Your message has been sent. 📧");
+      e.target.reset();
     }
   };
 
@@ -74,7 +77,7 @@ const Contacts = ({ setSelectedPage }: Props) => {
             }}
           >
             <form
-              className="flex flex-col gap-5 md:w-full mr-20 xs:w-11/12 xs:mx-5 md:mx-0 text-cream-20"
+              className="flex flex-col gap-5 md:w-full mr-20 xs:w-11/12 xs:mx-5 sm:w-11/12 sm:mx-5 md:mx-0 text-cream-20"
               target="_blank"
               onSubmit={onSubmit}
               method="POST"
@@ -135,7 +138,7 @@ const Contacts = ({ setSelectedPage }: Props) => {
 
               <button
                 type="submit"
-                className="mt-5 w-1/3 rounded-lg bg-secondary-400 px-10 py-3 transition duration-200 hover:bg-primary-300"
+                className="mt-5 w-1/2 rounded-lg bg-secondary-400 px-10 py-3 transition duration-200 hover:bg-primary-300"
               >
                 Submit
               </button>

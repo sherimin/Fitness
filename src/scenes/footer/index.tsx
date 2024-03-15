@@ -24,7 +24,7 @@ const Footer = () => {
           <p className="mt-5 xs:mt-4">123 Fitness Avenue, Cityville</p>
         </div>
 
-        <div className="mt-16 basis-1/4 md:mt-0 xs:mt-5">
+        <div className="mt-16 basis-1/4 md:mt-0 xs:mt-5 sm:mt-5">
           <h4 className="mt-10 font-bold">
             Built with ❤️ By{"  "}
             <a
@@ -36,7 +36,7 @@ const Footer = () => {
           </h4>
 
           <div className="flex">
-            <p className="mt-5 mr-5 xs:mt-4 xs:mr-3">
+            <p className="mt-5 mr-5 xs:mt-4 xs:mr-3 sm:mr-3">
               <a href="https://github.com/sherimin/Fitness">
                 <img
                   src={GitHubIcon}
@@ -45,7 +45,7 @@ const Footer = () => {
                 />
               </a>
             </p>
-            <p className="mt-5 mx-5 xs:mt-4 xs:mx-3">
+            <p className="mt-5 mx-5 xs:mt-4 xs:mx-3 sm:mx-3">
               <a href="https://www.linkedin.com/in/sherilu/">
                 <img
                   src={LinkedInIcon}
@@ -55,7 +55,7 @@ const Footer = () => {
               </a>
             </p>
 
-            <p className="mt-5 mx-5 xs:mt-4 xs:mx-3">
+            <p className="mt-5 mx-5 xs:mt-4 xs:mx-3 sm:mx-3">
               <a href="mailto:sherisherilu@gmail.com">
                 <img src={EmailIcon} alt="Email-Link" className="md:h-10 w-auto xs:h-7" />
               </a>
