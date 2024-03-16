@@ -68,11 +68,11 @@ const Benefits = ({ setSelectedPage }: Props) => {
             journey.
           </HText>
           <p className="my-5 text-sm">
-            At <text className="font-semibold">iCoach Fitness Hub</text>, we
+            At <span className="font-semibold">iCoach Fitness Hub</span>, we
             blend cutting-edge technology with personalized coaching to help you
             achieve your goals. With a focus on holistic health and
             individualized programming,{" "}
-            <text className="font-semibold">iCoach Fitness Hub</text> is not
+            <span className="font-semibold">iCoach Fitness Hub</span> is not
             just a gym; it's your partner in transformation.
           </p>
         </motion.div>

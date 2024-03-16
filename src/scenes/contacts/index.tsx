@@ -30,7 +30,7 @@ const Contacts = ({ setSelectedPage }: Props) => {
   return (
     <section
       id="contacts"
-      className="text-primary-300 mx-auto w-full pt-24 pb-28"
+      className="text-primary-300 mx-auto w-full pt-24 pb-28 xxs:pb-12 xs:pb-20"
     >
       <motion.div
         onViewportEnter={() => setSelectedPage(SelectedPage.Contacts)}
@@ -76,7 +76,7 @@ const Contacts = ({ setSelectedPage }: Props) => {
             }}
           >
             <form
-              className="flex flex-col gap-5 md:w-full mr-20 xs:w-11/12 xs:mx-5 sm:w-11/12 sm:mx-5 md:mx-0 text-cream-20"
+              className="flex flex-col gap-5 md:w-full mr-20 xxs:w-11/12 xxs:mx-5 xs:w-11/12 xs:mx-5 sm:w-11/12 sm:mx-5 md:mx-0 text-cream-20"
               target="_blank"
               onSubmit={onSubmit}
               method="POST"
@@ -159,7 +159,7 @@ const Contacts = ({ setSelectedPage }: Props) => {
               <img
                 src={ContactsGraphic}
                 alt="ContactsGraphic"
-                className="w-full h-5/6 rounded-xl xs:my-20 md:my-0"
+                className="w-full h-5/6 rounded-xl xxs:mt-10 xs:my-20 md:my-0"
               />
             </div>
           </motion.div>
