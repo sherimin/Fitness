@@ -46,7 +46,7 @@ const Benefits = ({ setSelectedPage }: Props) => {
   return (
     <section
       id="benefits"
-      className="mx-auto min-h-full w-5/6 pt-24 pb-28 text-primary-300"
+      className="mx-auto min-h-full w-5/6 pt-24 pb-28 text-primary-300 sm:pt-36"
     >
       <motion.div
         onViewportEnter={() => setSelectedPage(SelectedPage.Benefits)}
@@ -109,7 +109,7 @@ const Benefits = ({ setSelectedPage }: Props) => {
           <div>
             {/* Title */}
             <div className="relative">
-              <div className="before:absolute before:-top-48 before:-left-20 before:z-[-1] before:content-blockarrows before:max-h-2 before:max-w-2">
+              <div className="before:absolute before:-top-60 before:-left-20 before:z-[-1] before:content-blockarrows before:max-h-2 before:max-w-2">
                 <motion.div
                   className="md:flex items-center justify-between gap-8 mt-10"
                   initial="hidden"
@@ -158,7 +158,7 @@ const Benefits = ({ setSelectedPage }: Props) => {
 
             {/* Button */}
             <div className="relative mt-16">
-              <div className="before:absolute before:-top-16 before:-right-20 before:z-[-1] before:content-earth before:h-3">
+              <div className="before:absolute before:-top-16 before:-right-0 before:z-[-1] before:content-earth before:h-3">
                 <ActionButton setSelectedPage={setSelectedPage}>
                   JOIN US
                 </ActionButton>

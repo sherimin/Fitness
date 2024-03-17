@@ -92,7 +92,7 @@ const Home = ({ setSelectedPage }: Props) => {
       {/* Sponsors */}
       {/* Hide sponsor section in small screens */}
       {isAboveMediumScreens && (
-        <div className="h-[135px] w-full bg-primary-100 py-5">
+        <div className="h-[135px] w-full my-5 bg-primary-100 py-5">
           <div className="text-center mt-0 mb-5 font-semibold text-xl">
             PARTNERED WITH
           </div>

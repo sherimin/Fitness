@@ -5,7 +5,7 @@ import EmailIcon from "@/assets/email.png";
 
 const Footer = () => {
   return (
-    <section className="bg-primary-100 md:flex justify-between text-cream-20 xxs:py-2 xxs: text-base xs:py-2 xs:text-xs sm:py-8 sm:text-sm">
+    <section className="bg-primary-100 md:flex justify-between text-cream-20 xxs:py-2 xxs: text-base xs:py-2 xs:text-xs sm:py-8 sm:text-sm md:pb-0">
       <div className="justify-content mx-auto w-5/6 gap-5 md:flex">
         <div className="mt-5 basis-1/2 md:mt-0">
           <img src={Logo} className="h-20 w-auto" />
@@ -17,14 +17,14 @@ const Footer = () => {
         </div>
 
         {/* Contact Us Section */}
-        <div className="basis-1/4 xxs:my-5 xs:my-5 sm:my-5 md:my-0 flex-col">
+        <div className="basis-1/4 xxs:my-5 xs:my-5 sm:my-5 md:my-6 flex-col">
           <h4 className="font-bold md:mt-10">Contact Us</h4>
-          <p className="md:mt-10 sm:mt-8 xs:mt-4 xxs:mt-2">(123)456-7890</p>
-          <p className="md:mt-10 sm:mt-8 xs:mt-4 xxs:mt-2">123 Fitness Avenue, Cityville</p>
+          <p className="md:mt-4 sm:mt-8 xs:mt-4 xxs:mt-2">(123)456-7890</p>
+          <p className="md:mt-6 sm:mt-8 xs:mt-4 xxs:mt-2">123 Fitness Avenue, Cityville</p>
         </div>
 
         {/* Developer Info Section */}
-        <div className="basis-1/4 xxs:my-5 xs:my-5 sm:my-5 md:my-0">
+        <div className="basis-1/4 xxs:my-5 xs:my-5 sm:my-5 md:my-16">
           <h4 className="font-bold">
             Built with ❤️ By{"  "}
             <a

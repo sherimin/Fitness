@@ -53,7 +53,7 @@ const PersonalTraining = ({ setSelectedPage }: Props) => {
   return (
     <section
       id="personaltraining"
-      className="w-full bg-primary-100 pt-24 pb-28 text-cream-20"
+      className="w-full bg-primary-100 pt-24 pb-28 text-cream-20 sm:pt-36"
     >
       <motion.div
         onViewportEnter={() => setSelectedPage(SelectedPage.PersonalTraining)}

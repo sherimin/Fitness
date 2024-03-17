@@ -21,7 +21,7 @@ const NavBar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
   return (
     <nav>
       <div
-        className={`${navbarBackground} ${flexBetween} fixed top-0 z-40 w-full h-[10%] py-0 rounded-bl-[10%] rounded-br-[10%]`}
+        className={`${navbarBackground} ${flexBetween} fixed top-0 z-40 w-full h-[10%] min-h-16 max-h-24 py-0 rounded-bl-[10%] rounded-br-[10%]`}
       >
         <div className={`${flexBetween} mx-auto w-5/6`}>
           <div className={`${flexBetween} w-full gap-16`}>
@@ -86,7 +86,7 @@ const NavBar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
           </div>
 
           {/* Menu Links */}
-          <div className="ml-[33%] mr-[10%] flex flex-col gap-10 text-2xl xxs:gap-4 xxs:text-lg xxs:text-red-500 xs:gap-6 xs:text-xl xs:text-blue-500 sm:text-green-500 md:text-black">
+          <div className="ml-[33%] mr-[10%] flex flex-col gap-10 text-2xl xxs:gap-4 xxs:text-lg xxs:text-red-500 xs:gap-6 xs:text-xl xs:text-blue-500 sm:text-green-500">
             <Link
               page="Home"
               selectedPage={selectedPage}
