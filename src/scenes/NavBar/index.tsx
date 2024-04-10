@@ -86,7 +86,7 @@ const NavBar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
           </div>
 
           {/* Menu Links */}
-          <div className="ml-[33%] mr-[10%] flex flex-col gap-10 text-2xl xxs:gap-4 xxs:text-lg xxs:text-red-500 xs:gap-6 xs:text-xl xs:text-blue-500 sm:text-green-500">
+          <div className="ml-[33%] mr-[10%] flex flex-col gap-10 text-2xl xxs:gap-4 xxs:text-lg xs:gap-6 xs:text-xl">
             <Link
               page="Home"
               selectedPage={selectedPage}
